@@ -1,0 +1,467 @@
+
+
+
+
+## What is a List?
+
+A list is used to display a group of related items in an organized way.
+
+### Examples:
+
+* Shopping List
+* Daily Routine
+* To-Do List
+* Course Topics
+* Recipe Steps
+
+HTML provides three types of lists:
+
+1. Ordered List (`<ol>`)
+2. Unordered List (`<ul>`)
+3. Description List (`<dl>`)
+
+---
+
+# 1. Ordered List (`<ol>`)
+
+An Ordered List displays items in a numbered order. It is used when the sequence of items is important.
+
+### Example:
+
+```html
+<ol>
+    <li>Wake Up</li>
+    <li>Brush Teeth</li>
+    <li>Go to School</li>
+</ol>
+```
+
+### Output:
+
+1. Wake Up
+2. Brush Teeth
+3. Go to School
+
+### Ordered List Attributes
+
+**type**
+Changes the numbering style.
+
+* `1` → 1, 2, 3
+* `A` → A, B, C
+* `a` → a, b, c
+* `I` → I, II, III
+* `i` → i, ii, iii
+
+Example:
+
+```html
+<ol type="A">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ol>
+```
+
+**start**
+Starts the numbering from a specific number.
+
+Example:
+
+```html
+<ol start="5">
+    <li>Apple</li>
+    <li>Mango</li>
+    <li>Banana</li>
+</ol>
+```
+
+Output:
+5. Apple
+6. Mango
+7. Banana
+
+**reversed**
+Displays the numbers in reverse order.
+
+Example:
+
+```html
+<ol reversed>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ol>
+```
+
+Output:
+3. HTML
+2. CSS
+
+
+
+---
+
+# 2. Unordered List (`<ul>`)
+
+An Unordered List displays items using bullets instead of numbers. It is used when the order of items does not matter.
+
+### Example
+
+```html
+<ul>
+    <li>Apple</li>
+    <li>Mango</li>
+    <li>Banana</li>
+</ul>
+```
+
+### Output
+
+* Apple
+* Mango
+* Banana
+
+### Bullet Styles
+
+The bullet style is usually changed using CSS.
+
+* `disc` → ● (Default)
+* `circle` → ○
+* `square` → ■
+* `none` → No bullet
+
+Example:
+
+```html
+<ul style="list-style-type:square;">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ul>
+```
+
+---
+
+# 3. Description List (`<dl>`)
+
+A Description List is used to display a term and its description.
+
+### Tags Used
+
+* `<dl>` → Description List
+* `<dt>` → Description Term
+* `<dd>` → Description Details
+
+### Example
+
+```html
+<dl>
+    <dt>HTML</dt>
+    <dd>HyperText Markup Language</dd>
+
+    <dt>CSS</dt>
+    <dd>Cascading Style Sheets</dd>
+</dl>
+```
+
+
+
+---
+
+# 4. Nested Lists
+
+
+
+
+
+
+
+# Difference Between Lists
+
+| Ordered List   | Unordered List      | Description List        |
+| -------------- | ------------------- | ----------------------- |
+| Uses `<ol>`    | Uses `<ul>`         | Uses `<dl>`             |
+| Numbered items | Bulleted items      | Terms with descriptions |
+| Uses `<li>`    | Uses `<li>`         | Uses `<dt>` and `<dd>`  |
+| Best for steps | Best for item lists | Best for definitions    |
+
+
+
+
+
+
+
+Always place the nested `<ul>` or `<ol>` inside the parent `<li>` element.
+
+---
+
+# Key Points
+
+* `<ol>` creates a numbered list.
+* `<ul>` creates a bulleted list.
+* `<dl>` creates a description list.
+* `<li>` defines each list item.
+* `<dt>` defines a term.
+* `<dd>` defines the description of the term.
+* A nested list is a list inside another list.
+
+
+
+
+
+
+# What is a Table?
+
+A table is used to display data in **rows and columns**.
+
+### Real-Life Examples
+
+* Student Marksheet
+* School Timetable
+* Cricket Scorecard
+* Employee Records
+* Railway Timetable
+* Restaurant Menu
+
+---
+
+# HTML Table Tags
+
+| Tag       | Purpose                   |
+| --------- | ------------------------- |
+| `<table>` | Creates a table           |
+| `<tr>`    | Creates a table row       |
+| `<th>`    | Creates a table header    |
+| `<td>`    | Creates a table data cell |
+| `<thead>` | Groups the header rows    |
+| `<tbody>` | Groups the body rows      |
+
+---
+
+# Table Structure
+
+A table is made up of:
+
+* Rows
+* Columns
+* Header
+* Data
+
+Basic Structure:
+
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+
+    <tr>
+        <td>Rahul</td>
+        <td>20</td>
+    </tr>
+</table>
+```
+
+Output
+
+| Name  | Age |
+| ----- | --- |
+| Rahul | 20  |
+
+---
+
+# 1. `<table>` Tag
+
+The `<table>` tag is used to create a table.
+
+Example:
+
+```html id="4qt6vl"
+<table>
+
+</table>
+```
+
+---
+
+# 2. `<tr>` Tag
+
+The `<tr>` tag creates a table row.
+
+Example:
+
+```html id="0tsjlwm"
+<tr>
+</tr>
+```
+
+Each `<tr>` represents one horizontal row.
+
+---
+
+# 3. `<th>` Tag (Table Header)
+
+The `<th>` tag creates a table heading.
+
+Features:
+
+* Bold by default
+* Center aligned by default
+* Used for column titles
+
+Example:
+
+```html id="3zl9mf"
+<tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>City</th>
+</tr>
+```
+
+Output
+
+| Name | Age | City |
+
+---
+
+# 4. `<td>` Tag (Table Data)
+
+The `<td>` tag is used to insert data into a table.
+
+Example:
+
+```html id="mpsuzm"
+<tr>
+    <td>Rahul</td>
+    <td>20</td>
+    <td>Delhi</td>
+</tr>
+```
+
+Output
+
+| Rahul | 20 | Delhi |
+
+---
+
+# Complete Table Example
+
+```html id="tbtjlwm"
+<table border="1">
+
+<tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>City</th>
+</tr>
+
+<tr>
+    <td>Rahul</td>
+    <td>20</td>
+    <td>Delhi</td>
+</tr>
+
+<tr>
+    <td>Priya</td>
+    <td>21</td>
+    <td>Mumbai</td>
+</tr>
+
+</table>
+```
+
+---
+
+# Table Header (`<thead>`)
+
+The `<thead>` tag groups all the header rows of a table.
+
+Example:
+
+```html id="lc1kg4"
+<thead>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>City</th>
+    </tr>
+</thead>
+```
+
+### Advantages
+
+* Organizes the table.
+* Makes code easier to read.
+* Helps with styling using CSS.
+* Improves accessibility.
+
+---
+
+# Table Body (`<tbody>`)
+
+The `<tbody>` tag groups all the main data rows.
+
+Example:
+
+```html id="e3kpzj"
+<tbody>
+    <tr>
+        <td>Rahul</td>
+        <td>20</td>
+        <td>Delhi</td>
+    </tr>
+
+    <tr>
+        <td>Priya</td>
+        <td>21</td>
+        <td>Mumbai</td>
+    </tr>
+</tbody>
+```
+
+---
+
+# Using `<thead>` and `<tbody>` Together
+
+```html id="jlwmvr"
+<table border="1">
+
+<thead>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>City</th>
+    </tr>
+</thead>
+
+<tbody>
+    <tr>
+        <td>Rahul</td>
+        <td>20</td>
+        <td>Delhi</td>
+    </tr>
+
+    <tr>
+        <td>Priya</td>
+        <td>21</td>
+        <td>Mumbai</td>
+    </tr>
+</tbody>
+
+</table>
+
+
+# Key Points
+
+* `<table>` creates a table.
+* `<tr>` creates a row.
+* `<th>` creates a table heading.
+* `<td>` creates a data cell.
+* `<thead>` groups the table header.
+* `<tbody>` groups the table body.
+
+---
+

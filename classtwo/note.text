@@ -1,0 +1,24 @@
+| Tag        | Purpose             | Appearance        |
+| ---------- | ------------------- | ----------------- |
+| `<b>`      | Bold text           | **Bold**          |
+| `<strong>` | Important text      | **Bold**          |
+| `<i>`      | Italic text         | *Italic*          |
+| `<em>`     | Emphasized text     | *Italic*          |
+| `<del>`    | Deleted text        | ~~Strikethrough~~ |
+| `<mark>`   | Highlight text      | Yellow background |
+| `<small>`  | Smaller text        | Small font        |
+| `<sub>`    | Text below baseline | H₂O               |
+| `<sup>`    | Text above baseline | x²                |
+
+| Relative Path                  | Absolute Path                               |
+| ------------------------------ | ------------------------------------------- |
+| Used for files in your project | Used for files on another website or server |
+| No `https://`                  | Starts with `https://` or `http://`         |
+| Example: `images/logo.png`     | Example: `https://example.com/logo.png`     |
+| Faster for your website        | Requires accessing the external URL         |
+
+
+Links
+Images
+Paths
+File Structure

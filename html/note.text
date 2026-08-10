@@ -1,0 +1,82 @@
+1 What is HTML?
+HTML stands for HyperText Markup Language.
+
+H → Hyper
+T → Text
+M → Markup
+L → Language
+
+
+2.What is HyperText?
+HyperText is text that contains links (called hyperlinks) to other web pages or resources.
+
+
+3.What is Markup?
+Markup means using tags to describe the structure of content.
+
+
+Features of HTML
+Easy to learn
+Platform independent
+Used to create web pages
+Supported by all web browsers
+Works with CSS and JavaScript
+Uses tags to organize content
+
+
+4.<!DOCTYPE html>
+
+<!DOCTYPE html> tells the browser that the document is written in HTML5.
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example</title>
+</head>
+<body>
+
+<h1>Hello World</h1>
+
+</body>
+</html>
+
+
+
+
+5. <html> Tag
+
+The <html> tag is the root element of an HTML document.
+
+
+
+6. <head> Tag
+
+The <head> section contains information about the webpage, not the visible content.
+
+The information inside <head> is generally not displayed on the webpage.
+
+
+
+7. <title> Tag
+
+The <title> tag defines the title of the webpage.
+
+
+Rules
+Only one <title> tag should be used.
+It must be inside the <head> section.
+
+
+8.  <body> Tag
+
+The <body> contains everything that is visible to the user.
+
+
+| Tag    | Approx. Size | Importance |
+| ------ | ------------ | ---------- |
+| `<h1>` | 32px         | Highest    |
+| `<h2>` | 24px         | High       |
+| `<h3>` | 18.72px      | Medium     |
+| `<h4>` | 16px         | Normal     |
+| `<h5>` | 13.28px      | Low        |
+| `<h6>` | 10.72px      | Lowest     |

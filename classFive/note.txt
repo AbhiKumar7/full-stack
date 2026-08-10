@@ -1,0 +1,760 @@
+
+
+## 1. Audio in HTML
+
+The `<audio>` tag is used to add audio or sound to a webpage.
+
+For example:
+
+* Songs
+* Music
+* Podcasts
+* Recorded voice
+
+### Basic Syntax
+
+```html
+<audio controls>
+    <source src="song.mp3" type="audio/mpeg">
+</audio>
+```
+
+### Explanation
+
+* `<audio>` → Creates an audio player.
+* `controls` → Shows play, pause, volume, and other controls.
+* `<source>` → Specifies the audio file.
+* `src` → Specifies the location of the audio file.
+* `type` → Specifies the audio format.
+
+### Example
+
+```html
+<audio controls>
+    <source src="music.mp3" type="audio/mpeg">
+    Your browser does not support the audio tag.
+</audio>
+```
+
+---
+
+## Audio Attributes
+
+### 1. controls
+
+Shows the audio controls.
+
+```html
+<audio controls>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+```
+
+### 2. autoplay
+
+Starts playing the audio automatically.
+
+```html
+<audio autoplay>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+```
+
+### 3. loop
+
+Plays the audio again and again.
+
+```html
+<audio controls loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+```
+
+### 4. muted
+
+Starts the audio without sound.
+
+```html
+<audio controls muted>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+```
+
+### Multiple Attributes
+
+```html
+<audio controls autoplay loop muted>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+```
+
+---
+
+# 2. Video in HTML
+
+The `<video>` tag is used to add a video to a webpage.
+
+### Basic Syntax
+
+```html
+<video controls>
+    <source src="video.mp4" type="video/mp4">
+</video>
+```
+
+### Example
+
+```html
+<video width="500" controls>
+    <source src="movie.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+```
+
+---
+
+## Video Attributes
+
+### controls
+
+Shows video controls such as:
+
+* Play
+* Pause
+* Volume
+* Fullscreen
+
+```html
+<video controls>
+```
+
+### autoplay
+
+Starts the video automatically.
+
+```html
+<video autoplay>
+```
+
+### loop
+
+Repeats the video automatically.
+
+```html
+<video loop>
+```
+
+### muted
+
+Starts the video without sound.
+
+```html
+<video muted>
+```
+
+### width and height
+
+Used to set the size of the video.
+
+```html
+<video width="500" height="300" controls>
+```
+
+### poster
+
+Displays an image before the video starts.
+
+```html
+<video width="500" controls poster="thumbnail.jpg">
+    <source src="video.mp4" type="video/mp4">
+</video>
+```
+
+---
+
+# 3. iframe in HTML
+
+The `<iframe>` tag is used to display another webpage or external content inside your webpage.
+
+### iframe Syntax
+
+```html
+<iframe src="https://example.com"></iframe>
+```
+
+### Example
+
+```html
+<iframe
+    src="https://example.com"
+    width="600"
+    height="400"
+    title="Example Website">
+</iframe>
+```
+
+### Common Uses of iframe
+
+The `<iframe>` is commonly used to embed:
+
+* Google Maps
+* YouTube Videos
+* Other websites
+* Documents
+* Online forms
+
+---
+
+# 4. Embed Google Maps
+
+We can add a Google Map to our website using an `<iframe>`.
+
+## Steps to Embed Google Maps
+
+### Step 1
+
+Open Google Maps.
+
+### Step 2
+
+Search for the location you want to show.
+
+For example:
+
+```text
+India Gate, Delhi
+```
+
+### Step 3
+
+Click the **Share** button.
+
+### Step 4
+
+Select **Embed a map**.
+
+### Step 5
+
+Copy the iframe code.
+
+### Step 6
+
+Paste the code into your HTML file.
+
+### Example
+
+```html
+<iframe
+    src="https://www.google.com/maps/embed?pb=YOUR_MAP_CODE"
+    width="600"
+    height="450"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy">
+</iframe>
+```
+
+### Important
+
+The `src` value will be different for every location.
+
+Google Maps automatically provides the correct iframe code when you select **Share → Embed a map**.
+
+---
+
+# 5. Embed YouTube Video
+
+You can add a YouTube video to your website using an `<iframe>`.
+
+## Steps to Embed a YouTube Video
+
+### Step 1
+
+Open the YouTube video.
+
+### Step 2
+
+Click the **Share** button.
+
+### Step 3
+
+Click **Embed**.
+
+### Step 4
+
+Copy the iframe code.
+
+### Step 5
+
+Paste it into your HTML file.
+
+### Example
+
+```html
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/VIDEO_ID"
+    title="YouTube video player"
+    frameborder="0"
+    allowfullscreen>
+</iframe>
+```
+
+Replace:
+
+```text
+VIDEO_ID
+```
+
+with the actual YouTube video ID.
+
+---
+
+# Example: YouTube Video URL
+
+Normal YouTube URL:
+
+```text
+https://www.youtube.com/watch?v=abc123
+```
+
+The Video ID is:
+
+```text
+abc123
+```
+
+Embedded URL:
+
+```text
+https://www.youtube.com/embed/abc123
+```
+
+---
+
+# Complete HTML Example
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Media</title>
+</head>
+
+<body>
+
+    <h1>HTML Media Example</h1>
+
+    <hr>
+
+    <!-- Audio Section -->
+    <h2>Audio</h2>
+
+    <audio controls>
+        <source src="music.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+
+    <hr>
+
+    <!-- Video Section -->
+    <h2>Video</h2>
+
+    <video width="500" controls>
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <hr>
+
+    <!-- Google Map Section -->
+    <h2>Google Map</h2>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=YOUR_MAP_CODE"
+        width="600"
+        height="400"
+        style="border:0;"
+        allowfullscreen>
+    </iframe>
+
+    <hr>
+
+    <!-- YouTube Video Section -->
+    <h2>YouTube Video</h2>
+
+    <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/VIDEO_ID"
+        title="YouTube Video"
+        allowfullscreen>
+    </iframe>
+
+</body>
+
+</html>
+```
+
+# Easy Way to Remember
+
+```text
+<audio>  → Add sound or music
+
+<video>  → Add a video file
+
+<iframe> → Show external content inside a webpage
+
+Google Maps → Embedded using iframe
+
+YouTube Video → Embedded using iframe
+```
+
+
+ ************************************************************************************************************************
+
+## What are Semantic Elements?
+
+Semantic elements are HTML tags that clearly describe the purpose and meaning of the content.
+
+For example:
+
+* `<header>` tells us this is the top part of a webpage.
+* `<nav>` tells us this contains navigation links.
+* `<main>` tells us this is the main content.
+* `<footer>` tells us this is the bottom part of a webpage.
+
+Semantic elements make HTML code easier to read, understand, and organize.
+
+---
+
+# Basic Semantic Website Structure
+
+```text
+HEADER
+   |
+NAV
+   |
+MAIN
+ ├── SECTION
+ │     └── ARTICLE
+ │
+ └── ASIDE
+   |
+FOOTER
+```
+
+---
+
+# 1. `<header>`
+
+The `<header>` element represents the top section of a webpage.
+
+It usually contains:
+
+* Website name
+* Logo
+* Heading
+* Introduction
+* Navigation
+
+### Example:
+
+```html
+<header>
+    <h1>My Website</h1>
+    <p>Welcome to my website</p>
+</header>
+```
+
+---
+
+# 2. `<nav>`
+
+The `<nav>` element is used for navigation links.
+
+These links help users move from one page or section to another.
+
+### Example:
+
+```html
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+</nav>
+```
+
+### Easy Meaning:
+
+`<nav>` = Navigation Menu
+
+---
+
+# 3. `<main>`
+
+The `<main>` element contains the main and most important content of the webpage.
+
+A webpage should normally have only one `<main>` element.
+
+### Example:
+
+```html
+<main>
+    <h2>Welcome</h2>
+    <p>This is the main content of the website.</p>
+</main>
+```
+
+### Easy Meaning:
+
+`<main>` = Main Content
+
+---
+
+# 4. `<section>`
+
+The `<section>` element is used to group related content together.
+
+For example:
+
+* About section
+* Services section
+* Contact section
+* Blog section
+
+### Example:
+
+```html
+<section>
+    <h2>About Us</h2>
+    <p>We provide web development services.</p>
+</section>
+```
+
+### Multiple Sections:
+
+```html
+<section>
+    <h2>About</h2>
+</section>
+
+<section>
+    <h2>Services</h2>
+</section>
+
+<section>
+    <h2>Contact</h2>
+</section>
+```
+
+### Easy Meaning:
+
+`<section>` = Related Group of Content
+
+---
+
+# 5. `<article>`
+
+The `<article>` element represents independent and complete content.
+
+An article should make sense on its own.
+
+Examples:
+
+* Blog post
+* News article
+* Product review
+* Forum post
+
+### Example:
+
+```html
+<article>
+    <h2>What is HTML?</h2>
+    <p>HTML is used to create the structure of a webpage.</p>
+</article>
+```
+
+---
+
+# Difference Between `<section>` and `<article>`
+
+### `<section>`
+
+Used to group related content.
+
+### `<article>`
+
+Used for independent content that can stand alone.
+
+### Example:
+
+```html
+<section>
+    <h2>Latest News</h2>
+
+    <article>
+        <h3>First News</h3>
+        <p>This is the first news article.</p>
+    </article>
+
+    <article>
+        <h3>Second News</h3>
+        <p>This is the second news article.</p>
+    </article>
+</section>
+```
+
+In this example:
+
+* `<section>` = Latest News area
+* `<article>` = Individual news
+
+---
+
+# 6. `<aside>`
+
+The `<aside>` element contains extra or secondary content.
+
+It is not the main content of the webpage.
+
+Examples:
+
+* Sidebar
+* Related posts
+* Related links
+* Advertisements
+* Extra information
+
+### Example:
+
+```html
+<aside>
+    <h3>Related Links</h3>
+
+    <a href="#">HTML Tutorial</a>
+    <a href="#">CSS Tutorial</a>
+</aside>
+```
+
+### Easy Meaning:
+
+`<aside>` = Extra or Side Content
+
+---
+
+# 7. `<footer>`
+
+The `<footer>` element represents the bottom section of a webpage.
+
+It usually contains:
+
+* Copyright information
+* Contact information
+* Social media links
+* Privacy policy
+* Terms and conditions
+
+### Example:
+
+```html
+<footer>
+    <p>© 2026 My Website. All Rights Reserved.</p>
+</footer>
+```
+
+### Easy Meaning:
+
+`<footer>` = Bottom of Website
+
+---
+
+# Complete Example
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Semantic Elements</title>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>My Website</h1>
+        <p>Learn HTML Easily</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Courses</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Section -->
+        <section>
+            <h2>About HTML</h2>
+
+            <!-- Article 1 -->
+            <article>
+                <h3>What is HTML?</h3>
+                <p>HTML is used to create the structure of a webpage.</p>
+            </article>
+
+            <!-- Article 2 -->
+            <article>
+                <h3>Why Learn HTML?</h3>
+                <p>HTML is the first step in web development.</p>
+            </article>
+        </section>
+
+        <!-- Extra Content -->
+        <aside>
+            <h3>Related Courses</h3>
+            <p>CSS</p>
+            <p>JavaScript</p>
+        </aside>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 My Website. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
+```
+
+# Easy Way to Remember
+
+```text
+<header>  → Top of the website
+
+<nav>     → Navigation menu and links
+
+<main>    → Main content of the webpage
+
+<section> → Related group of content
+
+<article> → Independent content
+
+<aside>   → Extra or side content
+
+<footer>  → Bottom of the website
+```
+

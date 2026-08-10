@@ -1,0 +1,286 @@
+1. What is CSS?
+
+CSS stands for Cascading Style Sheets.
+
+CSS is used to style and design HTML elements.
+
+With CSS, we can change:
+
+Text color
+Background color
+Font size
+Width and height
+Borders
+Spacing
+Position
+Layout
+Example without CSS
+<h1>Welcome to My Website</h1>
+<p>This is a simple paragraph.</p>
+
+This shows content with the browser's default style.
+
+Example with CSS
+<h1 style="color: blue;">Welcome to My Website</h1>
+<p style="color: green;">This is a simple paragraph.</p>
+CSS Syntax
+
+The basic CSS syntax is:
+
+selector {
+  property: value;
+}
+Example:
+h1 {
+  color: red;
+}
+Explanation
+h1 → Selector
+color → Property
+red → Value
+
+This means:
+
+Select all <h1> elements and change their text color to red.
+
+2. Inline CSS
+
+Inline CSS is written directly inside an HTML element using the style attribute.
+
+Syntax
+<tag style="property: value;">Content</tag>
+Example
+<h1 style="color: red;">Hello Students</h1>
+
+<p style="font-size: 20px;">
+  Welcome to CSS Class
+</p>
+Multiple CSS Properties
+<h1 style="color: white; background-color: blue; padding: 10px;">
+  Welcome
+</h1>
+Advantages
+Easy for small changes
+Good for testing a style quickly
+Disadvantages
+Makes HTML code messy
+Difficult to manage large websites
+Same style must be repeated
+Example
+<p style="color: red;">Paragraph 1</p>
+<p style="color: red;">Paragraph 2</p>
+<p style="color: red;">Paragraph 3</p>
+
+Here, we repeat the same CSS again and again.
+
+3. Internal CSS
+
+Internal CSS is written inside the <style> tag.
+
+The <style> tag is usually placed inside the <head> section.
+
+Example
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Internal CSS</title>
+
+  <style>
+    h1 {
+      color: blue;
+    }
+
+    p {
+      color: green;
+      font-size: 20px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Welcome to CSS</h1>
+
+  <p>This is the first paragraph.</p>
+  <p>This is the second paragraph.</p>
+
+</body>
+</html>
+Explanation
+h1 {
+  color: blue;
+}
+
+All <h1> elements will become blue.
+
+p {
+  color: green;
+  font-size: 20px;
+}
+
+All <p> elements will have:
+
+Green text
+Font size of 20px
+Advantages
+CSS is written in one place
+Better than inline CSS
+Easy for styling a single HTML page
+Disadvantages
+Not suitable for multiple HTML pages
+CSS cannot easily be reused on other pages
+4. External CSS
+
+External CSS means writing CSS in a separate .css file.
+
+This is the most commonly used and recommended method for larger websites.
+
+Step 1: Create an HTML file
+
+index.html
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>External CSS</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <h1>Welcome to My Website</h1>
+
+  <p>This website is styled using External CSS.</p>
+
+</body>
+</html>
+Step 2: Create a CSS file
+
+style.css
+
+h1 {
+  color: blue;
+  background-color: lightgray;
+}
+
+p {
+  color: green;
+  font-size: 20px;
+}
+How does it work?
+<link rel="stylesheet" href="style.css">
+
+This connects the HTML file with the CSS file.
+
+rel="stylesheet" → Tells the browser that this is a CSS stylesheet.
+href="style.css" → Tells the browser where the CSS file is located.
+Complete Folder Structure
+my-project/
+│
+├── index.html
+│
+└── style.css
+index.html
+<link rel="stylesheet" href="style.css">
+
+The browser reads style.css and applies the styles to the HTML page.
+
+Internal CSS vs External CSS
+Internal CSS
+<style>
+  h1 {
+    color: red;
+  }
+</style>
+External CSS
+
+HTML:
+
+<link rel="stylesheet" href="style.css">
+
+CSS:
+
+h1 {
+  color: red;
+}
+5. Comparison of All Three Methods
+Method	Where CSS is Written	Best For
+Inline CSS	Inside HTML element	Small changes
+Internal CSS	Inside <style> tag	One HTML page
+External CSS	Separate .css file	Multiple pages and large projects
+Example: Same Style Using All Three Methods
+Inline CSS
+<h1 style="color: red;">Hello World</h1>
+Internal CSS
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    h1 {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Hello World</h1>
+</body>
+</html>
+External CSS
+HTML
+<link rel="stylesheet" href="style.css">
+
+<h1>Hello World</h1>
+CSS
+h1 {
+  color: red;
+}
+Teaching Activity
+
+Ask students to create a simple page:
+
+<h1>My Profile</h1>
+<p>Name: Student Name</p>
+<p>I am learning HTML and CSS.</p>
+Task 1: Inline CSS
+
+Add:
+
+Different text colors
+Font sizes
+Background colors
+Task 2: Internal CSS
+
+Move the styles into a <style> tag.
+
+Task 3: External CSS
+
+Create a style.css file and connect it using:
+
+<link rel="stylesheet" href="style.css">
+Important Points to Remember
+CSS = Cascading Style Sheets
+
+CSS is used to style HTML.
+
+CSS Syntax:
+selector {
+  property: value;
+}
+
+Three ways to add CSS:
+
+1. Inline CSS
+   → style attribute
+
+2. Internal CSS
+   → <style> tag inside <head>
+
+3. External CSS
+   → Separate .css file
+
+Recommended for large projects:
+External CSS
