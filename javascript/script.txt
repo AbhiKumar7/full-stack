@@ -1,0 +1,5 @@
+Odd or Even
+palindrome
+leapyear
+factorial
+largest number

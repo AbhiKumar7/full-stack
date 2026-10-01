@@ -1,0 +1,13 @@
+.container{
+    display: grid;
+    grid-template-columns: 100px 400px 500px;
+    grid-template-rows: auto auto auto;
+    gap: 5px;
+    
+}
+
+.container div {
+  background-color: lightblue;
+  padding: 30px;
+  text-align: center;
+}

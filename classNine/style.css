@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  position: relative;
+  height: 100%;
+}
+.co {
+  border: 2px solid brown;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 10px;
+  height: 100px;
+}
+
+.box {
+  border: 1px solid rgb(1, 27, 1);
+}
+
+.cont {
+  border: 2px solid brown;
+  height: 500px;
+}
+.box1 {
+  border: 2px solid rgb(42, 40, 40);
+  height: 100px;
+  background-color: yellow;
+}
+
+.box2 {
+  border: 2px solid rgb(28, 4, 115);
+  height: 100px;
+  background-color: aqua;
+  position: relative;
+}
+.lorem{
+    background-color: aqua;
+}
+.box3 {
+  border: 2px solid rgb(121, 201, 9);
+  height: 200px;
+  width: 50px;
+  position: fixed;
+  top: 150px;
+  right: 0;
+  z-index: 0;
+  background-color: blanchedalmond;
+  opacity: 100%;
+}
