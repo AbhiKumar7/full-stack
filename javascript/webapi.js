@@ -5,7 +5,7 @@ let keyboard = document.querySelector(".keyboard")
    let body =  document.querySelector("body")
    let h =  document.querySelector("h2")
 //     document.querySelector("h1").innerText = "UGC"
-    
+  
 // },4000);
 // let handleStop = () =>{
 
