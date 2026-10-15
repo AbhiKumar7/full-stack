@@ -1,0 +1,16 @@
+.deletebtn{
+    color: red;
+    /* border: 1px solid black; */
+    background-color: red;
+    color: white;
+    padding: 1px;
+}
+
+.updatebtn{
+    color: rgb(14, 231, 65);
+    /* border: 1px solid black; */
+    background-color: green;
+    color: white;
+
+    padding: 1px;
+}
