@@ -4,31 +4,33 @@ let list = document.querySelector(".list");
 let todolist = [];
 
 let handleDelete = (id) => {
-  console.log(id);
-  let filter = todolist.find((todo) => todo.id === id);
-  console.log(filter);
+  todolist = todolist.filter((todo) => todo.id !== id)
+  createElement()
 };
 let handleUpdate = (id) => {
-  console.log(id);
-  let filter = todolist.find((todo) => todo.id === id);
-  console.log(filter);
+   let todo =  todolist.find((todo) => todo.id === id)
+     let newTodo = prompt("enter new todo")
+   todo.text = newTodo
+   createElement()
+     
+   
 };
 
 let createElement = () => {
+
+  list.innerHTML = ""
+
+  todolist.forEach((todo) =>{
+
+ 
   let li = document.createElement("li");
   let deletebtn = document.createElement("button");
   let updatebtn = document.createElement("button");
   deletebtn.innerText = "delete";
   updatebtn.innerText = "update";
-  let todo = {
-    text: userinput.value,
-    id: Math.random(),
-  };
-  todolist.push(todo);
+ 
   li.innerText = todo.text;
-  list.appendChild(li);
-  list.appendChild(deletebtn);
-  list.appendChild(updatebtn);
+  
 
   deletebtn.addEventListener("click", () => {
     handleDelete(todo.id);
@@ -38,12 +40,21 @@ let createElement = () => {
   updatebtn.addEventListener("click", () => {
     handleUpdate(todo.id);
   });
+  list.appendChild(li);
+  list.appendChild(deletebtn);
+  list.appendChild(updatebtn);
+  })
 };
 
 let handleSubmit = () => {
   if (userinput.value === "") {
     alert("plz enter something");
   } else {
+     let todo = {
+    text: userinput.value,
+    id: Math.random(),
+  };
+  todolist.push(todo);
     createElement();
   }
 
