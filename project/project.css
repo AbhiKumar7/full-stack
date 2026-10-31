@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.marginsetter{
+    width: 90%;
+    margin: 0 auto
+}
+
+.container{
+       display: flex;
+       justify-content: space-between;
+}
+nav{
+       background-color: #2391FF;
+       padding: 10px;
+
+}
+.nav-link{
+    display: flex;
+    gap: 50px;
+    font-size: 20px;
+}
+
+.nav-link li{
+    list-style: none;
+    color: whitesmoke;
+    cursor: pointer;
+    
+}
+.nav-link li:hover{
+    color: #031120;
+    transition: .3s;
+    
+}
+.heading-web{
+    font-size: 23px;
+    color: whitesmoke;
+
+}
+
+
+/* landingpage */
+.landingpage-section{
+    background-color: #2391FF;
+    position: relative;
+    height: 500px;
+
+}
+.landingpage-container{
+    /* display: flex; */
+    /* justify-content: space-between; */
+    
+}
+.landingpage-photo{
+     width: 700px;
+     height: 700px;
+    position: absolute;
+    right: 15%;
+top: 35px;
+    
+
+
+
+}
+.landingpage-banner{
+     width: 100%;
+}
+
+.mydetail{
+    padding-top: 50px;
+}
+
+.small-text{
+    background-color: white;
+    font-size: 25px;
+    padding: 5px;
+    border-radius: 5px;
+    color: blue;
+}
+
+.main-title{
+    color: white;
+    font-size: 50px;
+    margin-top: 15px;
+}
+.para-text{
+    color: white;
+    font-size: 20px;
+}
+
+.btn{
+    margin-top: 30px;
+}
+.btn-hire{
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+
+}
+
+.btn-Portfolio{
+     background-color: rgb(232, 232, 239);
+    color: rgb(15, 15, 15);
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+}

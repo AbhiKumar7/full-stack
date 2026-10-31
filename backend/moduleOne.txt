@@ -1,0 +1,387 @@
+
+## Module 1: Web and Backend Fundamentals
+
+### 1. Frontend, Backend, and Full-Stack Development
+
+**Frontend Development**
+- The part of a website users see and interact with.
+- Technologies: HTML, CSS, JavaScript, React.
+- Examples: Login forms, buttons, menus, dashboards.
+
+**Backend Development**
+- Handles business logic, authentication, authorization, and database operations.
+- Technologies: Node.js, Express.js, MySQL.
+- Example: Verifying a username and password.
+
+**Full-Stack Development**
+- Combines frontend, backend, and database development.
+- Example: Building a complete login system using React, Node.js, Express, and MySQL.
+
+### 2. Client, Server, Database, and API
+
+- **Client:** An application that sends requests, such as a browser.
+- **Server:** A computer or program that receives and processes requests.
+- **Database:** Stores and retrieves application data.
+- **API:** An interface that allows applications to communicate.
+
+**Architecture:**
+
+Browser (React) → Backend (Node.js + Express) → Database (MySQL)
+
+The response travels back from the backend to the browser.
+
+### 3. How a Browser Communicates With a Server
+
+1. The user enters information in the browser.
+2. The frontend sends an HTTP request.
+3. The backend receives the request.
+4. The server validates the request.
+5. The backend communicates with the database.
+6. The database returns the requested information.
+7. The backend processes the result.
+8. The server sends an HTTP response.
+9. The frontend displays the result.
+
+### 4. IP Addresses, Ports, Domain Names, DNS, and Localhost
+
+**IP Address:** Identifies a network interface on a network.
+
+Examples:
+- `127.0.0.1` — IPv4 loopback address.
+- `192.168.1.10` — Example private IPv4 address.
+
+**Port:** Identifies a particular service or application endpoint.
+
+Common development ports:
+- `3000` — Often used by frontend development servers.
+- `5000` — Often used by Node.js backend servers.
+- `3306` — MySQL's default port.
+
+**Domain Name:** A human-readable name used to access a service, such as `example.com`.
+
+**DNS (Domain Name System):** Helps translate domain names into IP addresses.
+
+**Localhost:** Refers to your own computer.
+
+Example:
+`http://localhost:5000`
+
+### 5. HTTP vs HTTPS
+
+**HTTP:** A protocol for communication between clients and servers. HTTP itself does not encrypt data in transit.
+
+**HTTPS:** HTTP protected by TLS encryption.
+
+Differences:
+- HTTP does not provide TLS encryption.
+- HTTPS protects data in transit.
+- HTTPS is essential for securely transmitting login credentials over a network.
+
+Examples:
+- `http://example.com`
+- `https://example.com`
+
+### 6. HTTP Request and Response
+
+**HTTP Request:** A message sent from the client to the server.
+
+Example:
+
+```http
+POST /api/login HTTP/1.1
+Host: localhost:5000
+Content-Type: application/json
+
+{
+  "username": "rahul",
+  "password": "mypassword"
+}
+```
+
+Request components:
+- Method: `POST`
+- Path: `/api/login`
+- Headers: Metadata about the request
+- Body: The submitted login data
+
+**HTTP Response:** A message returned from the server.
+
+Example:
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "success": true,
+  "message": "Login successful"
+}
+```
+
+Response components:
+- Status code
+- Response headers
+- Response body
+
+### 7. HTTP Methods
+
+| Method | Purpose |
+|---|---|
+| GET | Retrieve data |
+| POST | Submit data or create a resource |
+| PUT | Replace a resource representation |
+| PATCH | Partially update a resource |
+| DELETE | Delete a resource |
+
+Example product endpoints:
+
+```text
+GET     /api/products
+GET     /api/products/10
+POST    /api/products
+PUT     /api/products/10
+PATCH   /api/products/10
+DELETE  /api/products/10
+```
+
+### 8. HTTP Status Codes
+
+| Code | Meaning |
+|---|---|
+| 200 | OK |
+| 201 | Created |
+| 400 | Bad Request |
+| 401 | Unauthorized |
+| 403 | Forbidden |
+| 404 | Not Found |
+| 409 | Conflict |
+| 500 | Internal Server Error |
+
+Examples:
+- `200`: Request succeeded.
+- `201`: A resource was created.
+- `400`: Request data is invalid.
+- `401`: Authentication is missing or invalid.
+- `403`: Access is forbidden.
+- `404`: Requested resource was not found.
+- `409`: Request conflicts with existing data.
+- `500`: An unexpected server error occurred.
+
+### 9. JSON, Headers, Cookies, Query Parameters, and Request Bodies
+
+**JSON:** A text format used to represent structured data.
+
+```json
+{
+  "id": 1,
+  "name": "Keyboard",
+  "price": 1200,
+  "inStock": true
+}
+```
+
+**Headers:** Carry request or response metadata.
+
+Examples:
+- `Content-Type`
+- `Accept`
+- `Authorization`
+
+**Cookies:** Small pieces of data stored by a browser and sent with matching requests. They are often used for session management.
+
+Important cookie security settings:
+- `HttpOnly`
+- `Secure`
+- `SameSite`
+
+**Query Parameters:** Commonly used for searching, filtering, and pagination.
+
+Example:
+
+```text
+GET /api/products?category=electronics&page=2
+```
+
+**Request Body:** Contains data submitted to the server.
+
+Example:
+
+```json
+{
+  "productName": "Keyboard",
+  "price": 1200
+}
+```
+
+### 10. REST API Basics
+
+REST is an architectural style used to design web APIs.
+
+Important principles:
+- Resources are identified using URLs.
+- HTTP methods describe the intended operation.
+- HTTP status codes communicate the outcome.
+- Requests contain the information needed to process them.
+
+Example:
+
+```text
+GET    /api/products
+POST   /api/products
+GET    /api/products/10
+PATCH  /api/products/10
+DELETE /api/products/10
+```
+
+### 11. Installing Backend Development Tools
+
+Install these tools:
+
+1. Node.js and npm: https://nodejs.org/
+2. Visual Studio Code: https://code.visualstudio.com/
+3. Git: https://git-scm.com/
+4. Postman: https://www.postman.com/downloads/
+5. MySQL: https://dev.mysql.com/downloads/
+
+Verify your installations:
+
+```bash
+node -v
+npm -v
+git --version
+```
+
+### 12. Create Your First Node.js Server
+
+Create a project:
+
+```bash
+mkdir backend-course
+cd backend-course
+npm init -y
+npm install express
+```
+
+Create `server.js`:
+
+```js
+const express = require("express");
+
+const app = express();
+
+app.use(express.json());
+
+app.get("/", (req, res) => {
+  res.status(200).json({
+    message: "Backend server is working!"
+  });
+});
+
+app.listen(5000, () => {
+  console.log("Server running on port 5000");
+});
+```
+
+Run the server:
+
+```bash
+node server.js
+```
+
+Open:
+
+`http://localhost:5000`
+
+Expected response:
+
+```json
+{
+  "message": "Backend server is working!"
+}
+```
+
+### 13. Login Request-Response Flow
+
+```text
+User enters login details
+          |
+          v
+React frontend
+          |
+          | POST /api/login
+          v
+Express backend
+          |
+          v
+Validate request data
+          |
+          v
+Query MySQL database
+          |
+          v
+Retrieve user record
+          |
+          v
+Verify password hash
+          |
+          v
+Return HTTP status and JSON
+          |
+          v
+React displays the result
+```
+
+**Important security rules:**
+- Never store plain-text passwords.
+- Store passwords using an appropriate password-hashing algorithm.
+- Use parameterized database queries.
+- Use HTTPS in production.
+- Protect authentication sessions or tokens.
+- Do not expose database credentials to the frontend.
+
+### 14. Practice Questions
+
+1. What is the difference between frontend and backend development?
+2. What is an API?
+3. Explain the difference between a client and a server.
+4. What is localhost?
+5. What is the purpose of DNS?
+6. Explain HTTP vs HTTPS.
+7. What is the difference between GET and POST?
+8. Explain PUT vs PATCH.
+9. What is the difference between status codes 401 and 403?
+10. What is JSON?
+11. What are cookies and headers?
+12. What are query parameters?
+13. What is a REST API?
+14. Explain the login request-response flow.
+15. Why should passwords be stored as hashes?
+
+### 15. Practical Assignment
+
+Build and test a simple Node.js server.
+
+Requirements:
+- Install Node.js and Express.
+- Create a `server.js` file.
+- Create a GET endpoint at `/`.
+- Return a JSON response.
+- Run the server on port 5000.
+- Open the endpoint in your browser.
+- Test the endpoint using Postman.
+- Draw and explain the login request-response diagram.
+
+### Module 1 Completion Checklist
+
+- [ ] Understand frontend, backend, and full-stack development.
+- [ ] Understand clients, servers, APIs, and databases.
+- [ ] Understand IP addresses, ports, domains, DNS, and localhost.
+- [ ] Understand HTTP and HTTPS.
+- [ ] Understand requests, responses, and HTTP methods.
+- [ ] Learn common HTTP status codes.
+- [ ] Understand JSON, headers, cookies, query parameters, and request bodies.
+- [ ] Understand REST API fundamentals.
+- [ ] Install the required development tools.
+- [ ] Create and test your first Node.js server.
+
+**Next Module:** JavaScript for Backend Development — variables, functions, arrays, objects, callbacks, promises, async/await, modules, and the Node.js event loop.
