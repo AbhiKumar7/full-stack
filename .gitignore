@@ -1,2 +1,5 @@
 ﻿*.mp4
 /images/
+
+/backend/package.json
+/backend/package-lock.json
